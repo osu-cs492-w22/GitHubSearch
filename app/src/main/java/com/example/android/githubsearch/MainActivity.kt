@@ -43,7 +43,7 @@ class MainActivity : AppCompatActivity() {
         searchBtn.setOnClickListener {
             val query = searchBoxET.text.toString()
             if (!TextUtils.isEmpty(query)) {
-                adapter.updateSearchResults(dummySearchResults)
+                adapter.updateRepoList(dummySearchResults)
                 searchBoxET.setText("")
                 searchResultsListRV.scrollToPosition(0)
             }
