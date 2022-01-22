@@ -25,7 +25,7 @@
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="4dp"
         style="?attr/materialButtonStyle"
-        android:text="Do Search" />
+        android:text="Search" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_search_results"
