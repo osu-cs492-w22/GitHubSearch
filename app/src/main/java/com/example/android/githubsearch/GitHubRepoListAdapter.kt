@@ -11,11 +11,11 @@ class GitHubRepoListAdapter : RecyclerView.Adapter<GitHubRepoListAdapter.GitHubR
     var gitHubRepoList = listOf<GitHubRepo>()
 
     fun updateRepoList(newRepoList: List<GitHubRepo>) {
-        this.gitHubRepoList = newRepoList
-        this.notifyDataSetChanged()
+        gitHubRepoList = newRepoList
+        notifyDataSetChanged()
     }
 
-    override fun getItemCount() = this.gitHubRepoList.size
+    override fun getItemCount() = gitHubRepoList.size
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): GitHubRepoViewHolder {
         val itemView = LayoutInflater.from(parent.context)
@@ -24,7 +24,7 @@ class GitHubRepoListAdapter : RecyclerView.Adapter<GitHubRepoListAdapter.GitHubR
     }
 
     override fun onBindViewHolder(holder: GitHubRepoViewHolder, position: Int) {
-        holder.bind(this.gitHubRepoList[position])
+        holder.bind(gitHubRepoList[position])
     }
 
     class GitHubRepoViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
