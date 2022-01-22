@@ -44,7 +44,6 @@ class MainActivity : AppCompatActivity() {
             val query = searchBoxET.text.toString()
             if (!TextUtils.isEmpty(query)) {
                 adapter.updateRepoList(dummySearchResults)
-                searchBoxET.setText("")
                 searchResultsListRV.scrollToPosition(0)
             }
         }
