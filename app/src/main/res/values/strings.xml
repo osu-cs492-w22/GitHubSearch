@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">GitHub Search</string>
+
+    <string name="search_hint">Search GitHub…</string>
+    <string name="search">Search</string>
+    <string name="search_error">Unable to fetch search results.  Please check your internet connection and try again.</string>
 </resources>

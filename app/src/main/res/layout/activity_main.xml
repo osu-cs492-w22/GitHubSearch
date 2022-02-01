@@ -12,7 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:hint="Search GitHub..."
+        android:hint="@string/search_hint"
         app:startIconDrawable="@drawable/ic_baseline_search_24">
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/et_search_box"
@@ -26,11 +26,35 @@
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="4dp"
         style="?attr/materialButtonStyle"
-        android:text="Search" />
+        android:text="@string/search" />
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rv_search_results"
+    <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent">
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_search_results"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <TextView
+            android:id="@+id/tv_search_error"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:textAppearance="?attr/textAppearanceBody1"
+            android:textColor="?attr/colorError"
+            android:visibility="invisible"
+            android:text="@string/search_error"/>
+
+        <com.google.android.material.progressindicator.CircularProgressIndicator
+            android:id="@+id/loading_indicator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:indeterminate="true"
+            android:layout_gravity="top|center_horizontal"
+            android:layout_marginTop="32dp"
+            android:visibility="invisible" />
+    </FrameLayout>
+
 
 </LinearLayout>
